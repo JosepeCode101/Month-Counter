@@ -1,3 +1,24 @@
+Function getComment(xCell As Range) As String
+'UpdatebyExtendoffice20180330
+On Error Resume Next
+getComment = xCell.Comment.Text
+End Function
+
+
+Public Sub test()
+    Dim myString As String
+    Dim count As Integer
+    Dim vector() As Variant
+    myString = Selection.Address
+     'vector(count) = getComment(Selection)
+     myString = Range(Selection).Comment()
+    'myString = Selection.Range(myString).Comments
+    
+End Sub
+
+
+
+
 Sub commentToArray()
 
 
@@ -13,16 +34,35 @@ Sub commentToArray()
     
     
     'String que se asigna Apuntando a la direccion seleccionada
+    'ESTO FUNCIONA BIEN
     myRangeS = Selection.Address
     
+    
     'Tipo de dato variant Que da el valor de rango de myRangeS
-    arrayValues = Range(myRangeS).Value
+    'arrayValues = Range(myRangeS).Value
+    
+    
+    
+    
     
     'Rango que apunta a myRangeS de la hoja activa
-    Set myRange = ActiveSheet.Range(myRangeS)
+    'Set myRange = ActiveSheet.Range(myRangeS)
+    'Para Dos o mas celdas
+    'Set myRange = Cells.Range(myRangeS)
+    'Para Una celda y Selección de diferentes celdas
+    Set myRange = Range(myRangeS)
+    
+    
+    
+    
+    
+    
     
     'Rango de comentarios es un objeto de tipo rango que coincide con tipo y valor especificados
-    Set commentsRange = myRange.Cells.SpecialCells(xlCellTypeComments)
+    'Set commentsRange = myRange.Cells.SpecialCells(xlCellTypeComments)
+    Set commentsRange = myRange.Cells
+    
+    'Debug.Print (commentsRange)
     
     'Recoge la longitud del array
     arrayLenght = commentsRange.count
@@ -107,6 +147,5 @@ Sub commentToArray()
     Next mycell
     
     MsgBox "Enero:" & " " & Enero & vbNewLine & "Febrero:" & " " & Febrero & vbNewLine & "Marzo:" & " " & Marzo & vbNewLine & "Abril:" & " " & Abril & vbNewLine & "Mayo:" & " " & Mayo & vbNewLine & "Junio:" & " " & Junio & vbNewLine & "Julio:" & " " & Julio & vbNewLine & "Agosto:" & " " & Agosto & vbNewLine & "Septiembre:" & " " & Septiembre & vbNewLine & "Octubre:" & " " & Octubre & vbNewLine & "Noviembre:" & " " & Noviembre & vbNewLine & "Diciembre:" & " " & Diciembre
-
-
+ 
 End Sub
