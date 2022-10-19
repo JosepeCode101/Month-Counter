@@ -89,7 +89,7 @@ Sub commentToArray()
     Dim Diciembre As Integer
     
     'Declaración de Booleano
-    Dim interruptor As Boolean
+    Dim interruptor As Boolean  
     
     'Declaración de incrementer para recorrer la cadena
     Dim contador As Integer
@@ -109,7 +109,7 @@ Sub commentToArray()
         
         For contador = 1 To Len(almacen)
             'Debug.Print Mid(Almacen, contador, 1)
-            
+          
             'MsgBox Mid(almacen, contador, 1)
             If Mid(almacen, contador, 1) = "/" Then
             interruptor = Not (interruptor)
