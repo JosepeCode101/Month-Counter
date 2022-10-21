@@ -174,9 +174,37 @@ Sub bookingCounter()
         
     Next mycell
     
-    MsgBox " RESERVAS " & vbNewLine & "Enero:" & " " & Enero & vbNewLine & "Febrero:" & " " & Febrero & vbNewLine & "Marzo:" & " " & Marzo & vbNewLine & "Abril:" & " " & Abril & vbNewLine & "Mayo:" & " " & Mayo & vbNewLine & "Junio:" & " " & Junio & vbNewLine & "Julio:" & " " & Julio & vbNewLine & "Agosto:" & " " & Agosto & vbNewLine & "Septiembre:" & " " & Septiembre & vbNewLine & "Octubre:" & " " & Octubre & vbNewLine & "Noviembre:" & " " & Noviembre & vbNewLine & "Diciembre:" & " " & Diciembre
+    'MsgBox " RESERVAS " & vbNewLine & "Enero:" & " " & Enero & vbNewLine & "Febrero:" & " " & Febrero & vbNewLine & "Marzo:" & " " & Marzo & vbNewLine & "Abril:" & " " & Abril & vbNewLine & "Mayo:" & " " & Mayo & vbNewLine & "Junio:" & " " & Junio & vbNewLine & "Julio:" & " " & Julio & vbNewLine & "Agosto:" & " " & Agosto & vbNewLine & "Septiembre:" & " " & Septiembre & vbNewLine & "Octubre:" & " " & Octubre & vbNewLine & "Noviembre:" & " " & Noviembre & vbNewLine & "Diciembre:" & " " & Diciembre
     
-    MsgBox " CANCELACIONES " & vbNewLine & "Enero:" & " " & cEnero & vbNewLine & "Febrero:" & " " & cFebrero & vbNewLine & "Marzo:" & " " & cMarzo & vbNewLine & "Abril:" & " " & cAbril & vbNewLine & "Mayo:" & " " & cMayo & vbNewLine & "Junio:" & " " & cJunio & vbNewLine & "Julio:" & " " & cJulio & vbNewLine & "Agosto:" & " " & cAgosto & vbNewLine & "Septiembre:" & " " & cSeptiembre & vbNewLine & "Octubre:" & " " & cOctubre & vbNewLine & "Noviembre:" & " " & cNoviembre & vbNewLine & "Diciembre:" & " " & cDiciembre
+    'MsgBox " CANCELACIONES " & vbNewLine & "Enero:" & " " & cEnero & vbNewLine & "Febrero:" & " " & cFebrero & vbNewLine & "Marzo:" & " " & cMarzo & vbNewLine & "Abril:" & " " & cAbril & vbNewLine & "Mayo:" & " " & cMayo & vbNewLine & "Junio:" & " " & cJunio & vbNewLine & "Julio:" & " " & cJulio & vbNewLine & "Agosto:" & " " & cAgosto & vbNewLine & "Septiembre:" & " " & cSeptiembre & vbNewLine & "Octubre:" & " " & cOctubre & vbNewLine & "Noviembre:" & " " & cNoviembre & vbNewLine & "Diciembre:" & " " & cDiciembre
 
-    
+    'Impresión por celdas de RESERVAS
+    Range("AA37").Value = Enero
+    Range("AB37").Value = Febrero
+    Range("AC37").Value = Marzo
+    Range("AD37").Value = Abril
+    Range("AE37").Value = Mayo
+    Range("AF37").Value = Junio
+    Range("AG37").Value = Julio
+    Range("AH37").Value = Agosto
+    Range("AI37").Value = Septiembre
+    Range("AJ37").Value = Octubre
+    Range("AK37").Value = Noviembre
+    Range("AL37").Value = Diciembre
+        
+    'Impresión por celdas de Cancelaciones
+    Range("AA38").Value = cEnero
+    Range("AB38").Value = cFebrero
+    Range("AC38").Value = cMarzo
+    Range("AD38").Value = cAbril
+    Range("AE38").Value = cMayo
+    Range("AF38").Value = cJunio
+    Range("AG38").Value = cJulio
+    Range("AH38").Value = cAgosto
+    Range("AI38").Value = cSeptiembre
+    Range("AJ38").Value = cOctubre
+    Range("AK38").Value = cNoviembre
+    Range("AL38").Value = cDiciembre
+
+
 End Sub
