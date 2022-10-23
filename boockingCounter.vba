@@ -105,8 +105,10 @@ Sub bookingCounter()
     
     'MsgBox "Valor del Booleano se inicia en... " & cancelado
     ' Bucle que recorre casillas imprimiendo los valores de fechas
-    For Each mycell In commentsRange
     
+    
+    For Each mycell In commentsRange
+        
         arrayComments(i) = mycell.Comment.Text
         almacen = arrayComments(i)
         'Debug.Print (almacen)
