@@ -105,8 +105,12 @@ Sub bookingCounter()
     
     'MsgBox "Valor del Booleano se inicia en... " & cancelado
     ' Bucle que recorre casillas imprimiendo los valores de fechas
+    ' Si el usuario selecciona casillas vacías estas darán el "Runtime Error 91"
+    ' Para evitar esto de cara al usuario final, le diremos al codigo que salte ante las líneas
+    ' que dan error esto lo hacemos con la sentencia - On Error Resume Next -
     
-    
+    On Error Resume Next
+
     For Each mycell In commentsRange
         
         arrayComments(i) = mycell.Comment.Text
